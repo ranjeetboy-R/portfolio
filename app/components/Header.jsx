@@ -1,4 +1,5 @@
 import { ArrowDownToLine, ArrowRight } from 'lucide-react'
+import { motion } from "motion/react"
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 
@@ -15,33 +16,57 @@ const Header = () => {
         if (systemMode && theme === 'system') {
             setIsDarkMode(true)
         }
-
-
     }, [theme]);
 
     return (
         <div className="relative h-screen">
-            <img src={isDarkMode ? '/header-dark-img.png' : '/header_background.png'} className={`absolute top-0 left-0 w-full h-full object-cover select-none`} />
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(143,212,255,0.12)_12%,rgba(0,255,225,0.10)_35%,rgba(0,217,255,0.10)_60%,rgba(0,238,255,0)_90%)]"></div>
+
             <div id='top' className='absolute top-0 w-full left-0 z-10 h-screen md:p-0 p-5 flex items-center justify-center flex-col'>
-                <div className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] border border-white rounded-full">
+                <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+                    className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] border border-white rounded-full"
+                >
                     <img src="/ranjeet.jpeg" alt='ranjeet' className='dark:shadow-cyan-300/30 shadow-[2px_2px_20px_rgba(0,0,0,0.3)] aspect-square w-40 rounded-full select-none' />
-                </div>
+                </motion.div>
 
-                <p className='text-black dark:text-white/90 ovo mt-5'>Hi! I'm Ranjeet Kumar 👋</p>
+                <motion.p
+                    initial={{ y: -20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                className='text-black dark:text-white/90 ovo mt-5'>Hi! I'm Ranjeet Kumar 👋</motion.p>
 
-                <h1 className='text-center mt-3 font1 dark:text-white text-slate-800 text-3xl'>A Full-Stack  Web Developer & <br /> AI Automation Enthusiast.
-                </h1>
+                <motion.h3
+                    initial={{ y: -30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className='text-center mt-3 font1 dark:text-white text-slate-800 text-3xl'
+                >A Full-Stack  Web Developer & <br /> AI Automation Enthusiast.
+                </motion.h3>
 
-                <p className='text-center md:max-w-lg max-w-md dark:text-white/50 text-slate-500 font1 text-sm mt-3 w-full'>I build modern, fast, and user-friendly web applications using the latest technologies. I also create AI-powered automation solutions to help businesses grow.
-                </p>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.7 }} className='text-center md:max-w-lg max-w-md dark:text-white/50 text-slate-500 font1 text-sm mt-3 w-full'>I build modern, fast, and user-friendly web applications using the latest technologies. I also create AI-powered automation solutions to help businesses grow.
+                </motion.p>
 
                 <div className="flex items-center gap-3 justify-center mt-7">
-                    <a href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/30 hover:dark:shadow-cyan-300/50 bg-black/90 text-sm flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
+                    <motion.a
+                        initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/30 hover:dark:shadow-cyan-300/50 bg-black/90 text-sm flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
                         Contact with me <ArrowRight className='size-4' />
-                    </a>
-                    <a href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 text-sm flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
+                    </motion.a>
+
+                    <motion.a
+                        initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 text-sm flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
                         Download resume <ArrowDownToLine className='size-4' />
-                    </a>
+                    </motion.a>
                 </div>
             </div>
             <a
