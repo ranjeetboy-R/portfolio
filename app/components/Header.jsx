@@ -73,7 +73,7 @@ const Header = () => {
                 href="https://wa.me/919205478065?text=Hello%20I%20want%20to%20know%20about%20your%20service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-5 right-5 z-50 bg-green-200 dark:bg-white/30 p-4 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
+                className="fixed bottom-5 right-5 z-50 bg-green-200 dark:bg-white/30 p-5 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
             >
                 <img src="/whatsapp.webp" alt="" className='w-8' />
             </a>

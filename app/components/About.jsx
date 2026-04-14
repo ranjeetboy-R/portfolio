@@ -1,6 +1,7 @@
 import { aboutData, tools } from '@/public/assets'
 import React from 'react'
 import { motion } from "motion/react";
+import { Tooltip } from 'antd';
 
 const About = () => {
     return (
@@ -23,9 +24,9 @@ const About = () => {
             <div className="md:grid md:grid-cols-3 flex justify-center flex-col items-center gap-5 md:mt-10 mt-5">
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.7 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.6 }}
                     className=''>
                     <img src="/ranjeet3.jpeg" alt='' className='rounded-xl w-60 h-full shadow-[3px_3px_10px_rgba(0,0,0,0.3)] object-cover' />
                 </motion.div>
@@ -44,7 +45,7 @@ const About = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.9, delay: 1.2 }}
+                        transition={{ duration: 0.6 }}
                         className="grid md:grid-cols-3 gap-3 mt-3">
                         {
                             aboutData.map((data, index) => (
@@ -68,9 +69,11 @@ const About = () => {
                         transition={{ duration: 0.6, delay: 0.6 }} className="flex items-center gap-3">
                         {
                             tools.map((tool, index) => (
-                                <div className="hover:border-slate-400 hover:scale-105 duration-300
+                                <div className="hover:border-slate-400 cursor-pointer hover:scale-105 duration-300
                                 dark:border-slate-600 hover:dark:border-slate-400 dark:bg-zinc-600 transition-all hover:-translate-y-1 hover:shadow-[3px_3px_1px_rgba(0,0,0,0.3)] w-10 h-10 p-1.5 border border-slate-300 rounded-md" key={index}>
-                                    <img src={tool} alt='tools' className='object-contain w-full h-full' />
+                                    <Tooltip title={tool?.title}>
+                                        <img src={tool?.icon} alt='tools' className='object-contain w-full h-full' />
+                                    </Tooltip>
                                 </div>
                             ))
                         }

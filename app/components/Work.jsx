@@ -72,13 +72,14 @@ const Work = () => {
                     ))
                 }
             </motion.div>
-            <motion.button
+            <motion.a href='https://github.com/ranjeetboy-R/'
+            target='_blank'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex items-center px-5 py-3 mx-auto mt-5 border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 dark:text-slate-400 hover:dark:text-slate-100 rounded-full text-sm gap-2 text-slate-600 hover:text-slate-800 transition-all cursor-pointer hover:border-slate-500">
                 Show more <ArrowRight className='size-4' />
-            </motion.button>
+            </motion.a>
         </motion.div>
     )
 }

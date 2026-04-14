@@ -23,6 +23,23 @@ body {
   color: white;
 }
 
+/* modal animation */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* custom class */
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);

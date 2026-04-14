@@ -1,4 +1,4 @@
-"use client"; // 🔥 VERY IMPORTANT
+"use client"
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
