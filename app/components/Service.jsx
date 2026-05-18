@@ -49,7 +49,7 @@ const Service = () => {
                             <h1 className='font1 mt-2'>{service.title[0]}</h1>
                             <p className='text-xs ovo dark:text-slate-300 mt-1 text-slate-600'>{service.description[0]}
                             </p>
-                            <div onClick={() => { setSelectedService(service); setOpenModal(true) }} className="hidden group-hover:flex absolute top-0 right-3 items-center w-fit gap-2 cursor-pointer hover:text-black py-2 transition-all dark:text-slate-300 text-xs text-slate-600">
+                            <div onClick={() => { setSelectedService(service); setOpenModal(true) }} className="md:hidden md:group-hover:flex flex absolute top-0 right-3 items-center w-fit gap-2 cursor-pointer hover:text-black py-2 transition-all dark:text-slate-300 text-xs text-slate-600">
                                 Read more <ArrowRight className='size-4 mt-0.5' />
                             </div>
                         </motion.div>

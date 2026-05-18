@@ -61,6 +61,10 @@ export const servicesData = [
     Created real-world projects using MERN stack`,
     projects: [
       {
+        title: 'Earn Money MLM Platform',
+        desc: `Built a modern earning and referral platform with secure authentication, wallet management, payment integration, user dashboard, income tracking, and responsive UI using Next.js, Node.js, and MongoDB.`
+      },
+      {
         title: 'AI Chat Website',
         desc: `Built using React.js and API
         User can ask questions and get AI responses
@@ -251,6 +255,12 @@ export const uiUxDesign = []
 export const Deployment = []
 
 export const workData = [
+  {
+    title: 'Earn Money MLM Platform',
+    description: 'Network Earning Full-Stack Web Application',
+    img: '/mlm.webp',
+    link: 'https://mlm-website-qwtw.vercel.app'
+  },
   {
     title: 'AI Chat Application',
     description: 'Full Stack AI Chat Application',

@@ -69,16 +69,16 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu preview */}
-                <div ref={sideMenuRef} className="translate-x-64 duration-500 transition-all p-5 fixed top-0 right-0 w-64 z-50 bg-emerald-50 dark:bg-zinc-900 shadow-lg shadow-black/50 h-screen">
+                <div ref={sideMenuRef} className="translate-x-64 duration-500 transition-all p-5 rounded-l-xl fixed top-0 right-0 w-64 z-50 bg-emerald-50 dark:bg-zinc-900 shadow-lg shadow-black/50 h-fit">
                     <button onClick={closeMenu} className="fixed top-5 right-5 flex items-center group gap-1 shadow-lg  rounded-full p-2 text-slate-500 dark:text-slate-300 cursor-pointer hover:text-slate-700">
                         <X />
                     </button>
-                    <ul className='flex flex-col font1 p-5 gap-5 mt-5'>
-                        <li><a onClick={closeMenu} className='ovo' href="#top">Home</a></li>
-                        <li><a onClick={closeMenu} className='ovo' href="#about">About me</a></li>
-                        <li><a onClick={closeMenu} className='ovo' href="#services">Services</a></li>
-                        <li><a onClick={closeMenu} className='ovo' href="#work">My Work</a></li>
-                        <li><a onClick={closeMenu} className='ovo' href="#contact">Contact me</a></li>
+                    <ul className='flex flex-col p-5 gap-5 mt-5'>
+                        <li><a onClick={closeMenu} href="#top">Home</a></li>
+                        <li><a onClick={closeMenu} href="#about">About me</a></li>
+                        <li><a onClick={closeMenu} href="#services">Services</a></li>
+                        <li><a onClick={closeMenu} href="#work">My Work</a></li>
+                        <li><a onClick={closeMenu} href="#contact">Contact me</a></li>
                     </ul>
                 </div>
             </nav>

@@ -46,26 +46,24 @@ const Work = () => {
                 initial={{ opacity: 0, y: -30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-2 mt-10">
+                className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-3 mt-10">
                 {
                     workData.map((work, index) => (
-                        <div key={index} className="hover:-translate-y-1 relative p-2 hover:shadow-lg transition-all group border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden aspect-square">
+                        <div key={index} className="md:hover:-translate-y-1 relative p-2 hover:shadow-lg transition-all group border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden aspect-square">
                             <img src={work.img} alt="" className='absolute top-0 left-0 object-cover w-full h-full' />
 
                             {
                                 isDarkMode ?
-                                    <div className="absolute top-0 left-0 w-full h-full bg-black/50 group-hover:bg-black/10 transition-all"></div>
+                                    <div className="absolute top-0 left-0 w-full h-full group-hover:bg-black/30 transition-all"></div>
                                     :
-                                    <div className="absolute top-0 left-0 w-full h-full bg-black/20 dark:bg-white/80 opacity-0 group-hover:opacity-100 transition-all"></div>
+                                    <div className="absolute top-0 left-0 w-full h-full dark:bg-white/80 opacity-0 group-hover:opacity-100 transition-all"></div>
                             }
 
-                            <div className="absolute bottom-3 left-3 right-3 bg-white/90 dark:bg-gray-900/70 group-hover:dark:bg-gray-900/80 group-hover:bg-white transition-all rounded-lg shadow-[3px_3px_3px_rgba(0,0,0,0.3)] flex justify-between items-center md:p-3 p-2">
-                                <div className="flex flex-col">
-                                    <h1 className='text-sm font-medium'>{work.title}</h1>
-                                    <p className='text-xs dark:text-slate-300 mt-1 ovo'>{work.description.slice(0, 25)}...</p>
-                                </div>
-                                <a href={work.link} target='_blank' className="border border-slate-300 aspect-square rounded-full p-1.5 group-hover:bg-lime-300 dark:bg-teal-700 dark:border-slate-400 hover:dark:bg-white/60 hover:bg-white transition-all dark:text-slate-300 bg-slate-100 cursor-pointer hover:dark:text-black shadow-[-2px_2px_0_rgba(0,0,0,0.9)]">
-                                    <Forward className='size-3' />
+                            <div className="absolute bottom-3 left-3 right-3 bg-white/90 dark:bg-gray-900 group-hover:dark:bg-gray-900/80 group-hover:bg-white transition-all rounded-lg shadow-[3px_3px_3px_rgba(0,0,0,0.3)] flex justify-between items-center md:p-3 p-2">
+                                <h1 className='text-sm font-medium'>{work.title}</h1>
+                                
+                                <a href={work.link} target='_blank' className="cursor-pointer">
+                                    <Forward className='size-5' />
                                 </a>
                             </div>
                         </div>
@@ -73,7 +71,7 @@ const Work = () => {
                 }
             </motion.div>
             <motion.a href='https://github.com/ranjeetboy-R/'
-            target='_blank'
+                target='_blank'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
