@@ -16,7 +16,8 @@ const ovo = Ovo({
 
 export const metadata = {
   title: "Portfolio - Ranjeet",
-  description: "",
+  description: "Ranjeet's professional portfolio featuring web development projects, technical expertise, and services. Explore innovative solutions and get in touch for collaboration opportunities.",
+  keywords: ['ranjeetportfolio', "portfolio", "landingpage", "nextjs", "fullstack", 'reactjs', "expressjs", 'nodejs'],
 };
 
 export default function RootLayout({ children }) {
