@@ -258,7 +258,7 @@ export const workData = [
   {
     title: 'Earn Money MLM Platform',
     description: 'Network Earning Full-Stack Web Application',
-    img: '/mlm.webp',
+    img: '/mlm.jpeg',
     link: 'https://mlm-website-qwtw.vercel.app'
   },
   {
