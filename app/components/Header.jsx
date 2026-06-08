@@ -1,22 +1,12 @@
 import { ArrowDownToLine, ArrowRight } from 'lucide-react'
 import { motion } from "motion/react"
-import { useTheme } from 'next-themes'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const Header = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false)
-    const { theme } = useTheme()
 
-    useEffect(() => {
-        const dark = theme === "dark"
-
-        setIsDarkMode(dark)
-        const systemMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (systemMode && theme === 'system') {
-            setIsDarkMode(true)
-        }
-    }, [theme]);
+    const message = encodeURIComponent(
+        "Hi Ranjeet, I visited your portfolio and would like to discuss a project."
+    );
 
     return (
         <div className="relative h-screen">
@@ -36,7 +26,7 @@ const Header = () => {
                     initial={{ y: -20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                className='text-black dark:text-white/90 ovo mt-5'>Hi! I'm Ranjeet Kumar 👋</motion.p>
+                    className='text-black dark:text-white/90 ovo mt-5'>Hi! I'm Ranjeet Kumar 👋</motion.p>
 
                 <motion.h3
                     initial={{ y: -30, opacity: 0 }}
@@ -55,25 +45,25 @@ const Header = () => {
                 <div className="flex items-center gap-3 justify-center mt-7">
                     <motion.a
                         initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/30 hover:dark:shadow-cyan-300/50 bg-black/90 text-sm flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 1 }}
+                        href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/30 hover:dark:shadow-cyan-300/50 bg-black/90 text-sm flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
                         Contact with me <ArrowRight className='size-4' />
                     </motion.a>
 
                     <motion.a
                         initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 text-sm flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 text-sm flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
                         Download resume <ArrowDownToLine className='size-4' />
                     </motion.a>
                 </div>
             </div>
             <a
-                href="https://wa.me/919205478065?text=Hello%20I%20want%20to%20know%20about%20your%20service"
+                href={`https://wa.me/919205478065?text=${message}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-5 right-5 z-50 bg-green-200 dark:bg-white/30 p-5 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
+                className="fixed bottom-5 right-5 z-50 bg-green-300 dark:bg-green-500/20 p-7 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
             >
                 <img src="/whatsapp.webp" alt="" className='w-8' />
             </a>

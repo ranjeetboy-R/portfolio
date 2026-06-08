@@ -1,4 +1,3 @@
-import { X } from 'lucide-react'
 import React, { useEffect } from 'react'
 
 const ServiceModal = ({ selectedService, setSelectedService, openModal, setOpenModal }) => {

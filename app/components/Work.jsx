@@ -22,31 +22,18 @@ const Work = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: -30 }}
             transition={{ duration: 1 }}
             id='work' className='flex flex-col mx-auto max-w-6xl w-full px-5 my-40'>
             <div className="flex flex-col items-center">
-                <motion.p
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }} className='text-sm ovo dark:text-slate-400'>My portfolio</motion.p>
+                <p className='text-sm ovo dark:text-slate-400'>My portfolio</p>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: -30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }} className='text-3xl font1'>My latest work</motion.h1>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.6 }} className='text-center md:w-md mt-5 dark:text-slate-300 text-slate-600 ovo text-sm'>Welcome to my portfolio showcasing modern website development and intelligent AI agent solutions, built with creativity, performance, and real-world impact.</motion.p>
+                <h1 className='text-3xl font1'>My latest work</h1>
+                <p className='text-center md:w-md mt-5 dark:text-slate-300 text-slate-600 ovo text-sm'>Welcome to my portfolio showcasing modern website development and intelligent AI agent solutions, built with creativity, performance, and real-world impact.</p>
             </div>
 
-            <motion.div
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-3 mt-10">
+            <div className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-3 mt-10">
                 {
                     workData.map((work, index) => (
                         <div key={index} className="md:hover:-translate-y-1 relative p-2 hover:shadow-lg transition-all group border border-slate-300 dark:border-slate-600 rounded-xl overflow-hidden aspect-square">
@@ -61,7 +48,7 @@ const Work = () => {
 
                             <div className="absolute bottom-3 left-3 right-3 bg-white/90 dark:bg-gray-900 group-hover:dark:bg-gray-900/80 group-hover:bg-white transition-all rounded-lg shadow-[3px_3px_3px_rgba(0,0,0,0.3)] flex justify-between items-center md:p-3 p-2">
                                 <h1 className='text-sm font-medium'>{work.title}</h1>
-                                
+
                                 <a href={work.link} target='_blank' className="cursor-pointer">
                                     <Forward className='size-5' />
                                 </a>
@@ -69,15 +56,10 @@ const Work = () => {
                         </div>
                     ))
                 }
-            </motion.div>
-            <motion.a href='https://github.com/ranjeetboy-R/'
-                target='_blank'
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex items-center px-5 py-3 mx-auto mt-5 border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 dark:text-slate-400 hover:dark:text-slate-100 rounded-full text-sm gap-2 text-slate-600 hover:text-slate-800 transition-all cursor-pointer hover:border-slate-500">
+            </div>
+            <a href='https://github.com/ranjeetboy-R/' className="flex items-center px-5 py-3 mx-auto mt-5 border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 dark:text-slate-400 hover:dark:text-slate-100 rounded-full text-sm gap-2 text-slate-600 hover:text-slate-800 transition-all cursor-pointer hover:border-slate-500">
                 Show more <ArrowRight className='size-4' />
-            </motion.a>
+            </a>
         </motion.div>
     )
 }

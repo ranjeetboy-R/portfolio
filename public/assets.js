@@ -61,6 +61,10 @@ export const servicesData = [
     Created real-world projects using MERN stack`,
     projects: [
       {
+        title: 'HelpCart – Local Service Marketplace Platform',
+        desc: `HelpCart is a full-stack marketplace platform that connects users with trusted local service providers. Users can discover, search, and connect with professionals across multiple service categories through a fast and responsive web application.`
+      },
+      {
         title: 'Earn Money MLM Platform',
         desc: `Built a modern earning and referral platform with secure authentication, wallet management, payment integration, user dashboard, income tracking, and responsive UI using Next.js, Node.js, and MongoDB.`
       },
@@ -194,60 +198,60 @@ export const servicesData = [
     ]
   },
   {
-  id: 4,
-  icon: ExternalLink,
-  title: ['Project Deployment', 'Deployment Specialist | Web Hosting & CI/CD'],
-  
-  description: [
-    'I deploy web applications efficiently with proper configuration, performance optimization, and live hosting.',
-    
-    `I handle deployment of websites and web applications on modern platforms.
+    id: 4,
+    icon: ExternalLink,
+    title: ['Project Deployment', 'Deployment Specialist | Web Hosting & CI/CD'],
+
+    description: [
+      'I deploy web applications efficiently with proper configuration, performance optimization, and live hosting.',
+
+      `I handle deployment of websites and web applications on modern platforms.
     I ensure that projects run smoothly in production with proper setup and configuration.
     I have experience in deploying frontend and full-stack applications.
     I focus on performance, uptime, and easy scalability.
     My goal is to make applications live, fast, and accessible to users worldwide.`
-  ],
+    ],
 
-  skills: [
-    'Vercel',
-    'Netlify',
-    'GitHub',
-    'GitHub Actions',
-    'CI/CD Basics',
-    'Domain Setup',
-    'DNS Configuration',
-    'Environment Variables',
-    'Node.js Hosting',
-    'MongoDB Atlas'
-  ],
+    skills: [
+      'Vercel',
+      'Netlify',
+      'GitHub',
+      'GitHub Actions',
+      'CI/CD Basics',
+      'Domain Setup',
+      'DNS Configuration',
+      'Environment Variables',
+      'Node.js Hosting',
+      'MongoDB Atlas'
+    ],
 
-  experience: `I have around 2 year of experience in project deployment.
+    experience: `I have around 2 year of experience in project deployment.
   Deployed multiple frontend and full-stack projects
   Connected domains and managed hosting platforms
   Worked with environment variables and production setup
   Learning CI/CD and automation for faster deployments`,
 
-  projects: [
-    {
-      title: 'Portfolio Website Deployment',
-      desc: `Deployed portfolio using Vercel
+    projects: [
+      {
+        title: 'Portfolio Website Deployment',
+        desc: `Deployed portfolio using Vercel
       Connected custom domain
       Optimized performance and loading speed`
-    },
-    {
-      title: 'Full Stack App Deployment',
-      desc: `Deployed MERN stack application
+      },
+      {
+        title: 'Full Stack App Deployment',
+        desc: `Deployed MERN stack application
       Backend hosted with proper environment setup
       Database connected using MongoDB Atlas`
-    },
-    {
-      title: 'Landing Page Deployment',
-      desc: `Deployed responsive landing page on Netlify
+      },
+      {
+        title: 'Landing Page Deployment',
+        desc: `Deployed responsive landing page on Netlify
       Configured domain and HTTPS
       Ensured fast and reliable performance`
-    }
-  ]
-}
+      }
+    ]
+  }
 ]
 
 export const aiAutomation = []
@@ -255,6 +259,12 @@ export const uiUxDesign = []
 export const Deployment = []
 
 export const workData = [
+  {
+    title: 'HelpCart – Service Provider Discovery Platform',
+    description: 'A modern marketplace platform for discovering and connecting with trusted local service providers.',
+    img: './helpcart.jpeg',
+    link: 'https://helpcart.vercel.app'
+  },
   {
     title: 'Earn Money MLM Platform',
     description: 'Network Earning Full-Stack Web Application',
@@ -271,7 +281,7 @@ export const workData = [
     title: 'Resume Builder',
     description: 'Full Stack Resume Builder Web Application',
     img: '/resume_img.webp',
-    link: 'https://resume-creator-client-one.vercel.app'
+    link: 'https://runcv.vercel.app'
   },
   {
     title: 'Real-Time Conversation',

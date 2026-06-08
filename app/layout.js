@@ -15,9 +15,27 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Portfolio - Ranjeet",
-  description: "Ranjeet's professional portfolio featuring web development projects, technical expertise, and services. Explore innovative solutions and get in touch for collaboration opportunities.",
-  keywords: ['ranjeetportfolio', "portfolio", "landingpage", "nextjs", "fullstack", 'reactjs', "expressjs", 'nodejs'],
+  title: "Ranjeet Kumar | Full-Stack Web Developer",
+  description:
+    "Professional portfolio of Ranjeet Kumar, a Full-Stack Web Developer specializing in Next.js, React.js, Node.js, Express.js, MongoDB, and modern web applications. Explore projects, skills, and development services.",
+
+  keywords: [
+    "Ranjeet Kumar",
+    "Ranjeet Portfolio",
+    "Full Stack Developer",
+    "Web Developer",
+    "Next.js Developer",
+    "React.js Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "JavaScript Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "MERN Stack Developer",
+    "Portfolio Website",
+    "Web Development Services",
+    "Freelance Developer"
+  ],
 };
 
 export default function RootLayout({ children }) {

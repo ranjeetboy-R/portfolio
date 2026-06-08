@@ -1,4 +1,5 @@
 import { LucideMail } from 'lucide-react'
+import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
@@ -20,10 +21,14 @@ const Footer = () => {
     }, [theme]);
 
     return (
-        <div id='contact' className='flex flex-col mx-auto w-full px-5 '>
+        <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: -30 }}
+            transition={{ duration: 1 }}
+            id='contact' className='flex flex-col mx-auto w-full px-5 '>
             <div className="flex flex-col items-center">
                 <a href="#top">
-                    <Image src={isDarkMode ? "/LOGO_DARK.png" : "/LOGO_LIGHT.png" } alt='' width={140} height={40} className='' />
+                    <Image src={isDarkMode ? "/LOGO_DARK.png" : "/LOGO_LIGHT.png"} alt='' width={140} height={40} className='w-auto h-auto' />
                 </a>
                 <div className="flex items-center gap-2 mt-2 text-slate-500">
                     <LucideMail className='size-4' />
@@ -38,7 +43,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
