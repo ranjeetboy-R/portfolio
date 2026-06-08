@@ -31,7 +31,7 @@ A modern and responsive personal portfolio website showcasing my projects, skill
 https://portfolioranjeet.vercel.app
 
 ## 📸 Screenshots
-<img width="1366" height="768" alt="Screenshot 2026-06-07 164411" src="https://github.com/user-attachments/assets/75acc071-12a3-4dc6-ba32-721a692e130c" />
+<img width="1366" height="768" alt="Screenshot 2026-06-08 153104" src="https://github.com/user-attachments/assets/ffa228b0-262f-4096-b1a0-0fb13c9fa375" />
 
 ### Home Page
 
