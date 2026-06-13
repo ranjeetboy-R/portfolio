@@ -21,7 +21,7 @@ const Header = () => {
                     transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
                     className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] border border-white rounded-full"
                 >
-                    <img src="/ranjeet.jpeg" alt='ranjeet' className='shadow-lg shadow-black/70 dark:shadow-cyan-300/30 aspect-square w-42 rounded-full select-none' />
+                    <img src="/ranjeet.jpeg" alt='ranjeet' className='shadow-lg shadow-black/40 dark:shadow-cyan-300/30 aspect-square w-42 rounded-full select-none' />
                 </motion.div>
 
                 <motion.p
@@ -44,19 +44,19 @@ const Header = () => {
                     transition={{ duration: 0.6, delay: 0.7 }} className='text-center md:max-w-lg max-w-md dark:text-white/50 text-slate-500 font1 text-sm mt-3 w-full'>I build modern, fast, and user-friendly web applications using the latest technologies. I also create AI-powered automation solutions to help businesses grow.
                 </motion.p>
 
-                <div className="flex items-center gap-3 justify-center mt-7">
+                <div className="flex md:flex-row flex-col items-center gap-5 justify-center mt-7">
                     <motion.a
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1 }}
-                        href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/40 hover:dark:shadow-cyan-300/30 bg-black/90 font-medium flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
+                        href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/40 hover:dark:shadow-cyan-300/30 bg-black/90 font-medium flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-7 py-3 rounded-full">
                         Contact with me <ArrowRight className='size-4' />
                     </motion.a>
 
                     <motion.a
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 font-medium flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
+                        transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 font-medium flex items-center gap-1 cursor-pointer transition-all px-7 py-3 rounded-full">
                         Download resume <ArrowDownToLine className='size-4' />
                     </motion.a>
                 </div>
