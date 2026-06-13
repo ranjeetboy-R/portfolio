@@ -1,3 +1,5 @@
+'use client'
+
 import { servicesData } from '@/public/assets'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
@@ -13,7 +15,7 @@ const Service = () => {
             initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: -30 }}
             transition={{ duration: 1 }}
-            id='services' className='flex flex-col mx-auto max-w-4xl w-full px-5 mt-40'>
+            id='services' className='flex flex-col mx-auto md:px-40 w-full px-5 mt-40'>
             <div className="flex flex-col items-center">
                 <p className='text-sm ovo dark:text-slate-400'>What i offers</p>
 
@@ -32,14 +34,16 @@ const Service = () => {
                             <h1 className='font1 mt-2'>{service.title[0]}</h1>
                             <p className='text-xs ovo dark:text-slate-300 mt-1 text-slate-600'>{service.description[0]}
                             </p>
-                            <div onClick={() => { setSelectedService(service); setOpenModal(true) }} className="md:hidden md:group-hover:flex flex absolute top-0 right-3 items-center w-fit gap-2 cursor-pointer hover:text-black py-2 transition-all dark:text-slate-300 text-xs text-slate-600">
-                                Read more <ArrowRight className='size-4 mt-0.5' />
+                            <div onClick={() => { setSelectedService(service); setOpenModal(true) }} className="md:hidden md:group-hover:flex flex absolute top-0 right-3 items-center w-fit gap-2 cursor-pointer hover:text-black py-2 transition-all dark:text-slate-300 text-slate-600">
+                                Read more <ArrowRight className='size-5 mt-0.5' />
                             </div>
                         </div>
                     ))
                 }
             </div>
+
             <ServiceModal selectedService={selectedService} setSelectedService={setSelectedService} openModal={openModal} setOpenModal={setOpenModal} />
+
         </motion.div>
     )
 }

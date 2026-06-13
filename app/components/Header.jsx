@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowDownToLine, ArrowRight } from 'lucide-react'
 import { motion } from "motion/react"
 import React from 'react'
@@ -19,21 +21,21 @@ const Header = () => {
                     transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
                     className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] border border-white rounded-full"
                 >
-                    <img src="/ranjeet.jpeg" alt='ranjeet' className='dark:shadow-cyan-300/30 shadow-[2px_2px_20px_rgba(0,0,0,0.3)] aspect-square w-40 rounded-full select-none' />
+                    <img src="/ranjeet.jpeg" alt='ranjeet' className='shadow-lg shadow-black/70 dark:shadow-cyan-300/30 aspect-square w-42 rounded-full select-none' />
                 </motion.div>
 
                 <motion.p
                     initial={{ y: -20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className='text-black dark:text-white/90 ovo mt-5'>Hi! I'm Ranjeet Kumar 👋</motion.p>
+                    className='text-black dark:text-white/90 text-lg font-medium mt-5'>Hi! I'm Ranjeet Kumar 👋</motion.p>
 
                 <motion.h3
                     initial={{ y: -30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className='text-center mt-3 font1 dark:text-white text-slate-800 text-3xl'
-                >A Full-Stack  Web Developer & <br /> AI Automation Enthusiast.
+                >A Full-Stack  Web Developer <br /> AI Automation Enthusiast.
                 </motion.h3>
 
                 <motion.p
@@ -47,14 +49,14 @@ const Header = () => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1 }}
-                        href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/30 hover:dark:shadow-cyan-300/50 bg-black/90 text-sm flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
+                        href='#contact' className="shadow-[2px_2px_20px_rgba(0,0,0,0.3)] dark:shadow-cyan-300/40 hover:dark:shadow-cyan-300/30 bg-black/90 font-medium flex items-center gap-1 hover:text-white cursor-pointer dark:bg-white dark:text-black hover:bg-black transition-all text-white/90 px-5 py-3 rounded-full">
                         Contact with me <ArrowRight className='size-4' />
                     </motion.a>
 
                     <motion.a
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 text-sm flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
+                        transition={{ duration: 0.6, delay: 1.2 }} href='/ranjeet-resume.pdf' download={true} className="hover:shadow-[2px_2px_20px_rgba(0,0,0,0.2)] border border-slate-300 dark:border-slate-600 hover:dark:border-slate-400 hover:border-slate-500 font-medium flex items-center gap-1 cursor-pointer transition-all px-5 py-3 rounded-full">
                         Download resume <ArrowDownToLine className='size-4' />
                     </motion.a>
                 </div>
@@ -63,9 +65,9 @@ const Header = () => {
                 href={`https://wa.me/919205478065?text=${message}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-5 right-5 z-50 bg-green-300 dark:bg-green-500/20 p-7 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
+                className="fixed bottom-5 right-5 z-50 bg-green-300/50 shadow-lg backdrop-blur-lg dark:bg-green-500/20 p-5 cursor-pointer hover:scale-110 transition-all animate-pulse hover:animate-none rounded-full"
             >
-                <img src="/whatsapp.webp" alt="" className='w-8' />
+                <img src="/whatsapp.webp" alt="" className='w-10' />
             </a>
         </div>
 

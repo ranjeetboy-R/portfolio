@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className="scroll-smooth"
     >
-      <body className={`${outfit.variable} ${ovo.variable} h-full antialiased min-h-full flex flex-col `}>
+      <body className={`${outfit.variable} ${ovo.variable} antialiased `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

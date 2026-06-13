@@ -260,7 +260,7 @@ export const Deployment = []
 
 export const workData = [
   {
-    title: 'HelpCart – Service Provider Discovery Platform',
+    title: 'HelpCart – Service Provider',
     description: 'A modern marketplace platform for discovering and connecting with trusted local service providers.',
     img: './helpcart.jpeg',
     link: 'https://helpcart.vercel.app'

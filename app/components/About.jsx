@@ -1,3 +1,5 @@
+'use client'
+
 import { aboutData, tools } from '@/public/assets'
 import React from 'react'
 import { motion } from "motion/react";
